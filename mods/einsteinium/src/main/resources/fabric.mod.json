@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "einsteinium",
+  "version": "${version}",
+  "name": "Einsteinium",
+  "description": "Advanced entity optimization mod for Minecraft",
+  "authors": [
+    "Einsteinium Team"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "assets/einsteinium/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.einsteinium.optimization.EinsteiniumMod"
+    ]
+  },
+  "mixins": [
+    "einsteinium.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.11.0+kotlin.2.0.0"
+  },
+  "suggests": {
+    "sodium": "*",
+    "modmenu": "*"
+  }
+}

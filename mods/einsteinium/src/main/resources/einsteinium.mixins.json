@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.einsteinium.optimization.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityTickMixin",
+    "EntityMovementMixin",
+    "ServerEntityMixin",
+    "DataTrackerMixin",
+    "EntityCollisionMixin",
+    "EntityPushMixin",
+    "ItemEntityMixin",
+    "MobSpawnerMixin",
+    "NaturalSpawnerMixin",
+    "ChunkSerializerMixin",
+    "EntityRendererMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
