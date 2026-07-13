@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "molten",
+  "version": "${version}",
+  "name": "Molten",
+  "description": "macOS 图形渲染极致优化模组，专为 Apple Silicon 设计。绕过 OpenGL → MoltenVK → Metal 的转译链，实现 Metal 原生渲染，带来显著的性能提升。",
+  "authors": [
+    "Molten Team"
+  ],
+  "contact": {
+    "homepage": "https://github.com/molten-optimization/molten",
+    "sources": "https://github.com/molten-optimization/molten",
+    "issues": "https://github.com/molten-optimization/molten/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/molten/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.molten.optimization.MoltenMod"
+    ],
+    "client": [
+      "com.molten.optimization.MoltenClient"
+    ],
+    "modmenu": [
+      "com.molten.optimization.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "molten.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": ">=0.100.1",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-language-kotlin": ">=1.11.0"
+  },
+  "suggests": {
+    "modmenu": ">=11.0.0"
+  },
+  "custom": {
+    "cloth-config2": {
+      "configScreen": "com.molten.optimization.config.MoltenConfig"
+    }
+  }
+}
