@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.rhenium.optimization.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockRedstoneWireMixin",
+    "LevelMixin",
+    "RedstoneComparatorLogicMixin",
+    "DropperDispenserBlockMixin",
+    "AbstractMinecartMixin"
+  ],
+  "client": [],
+  "injectVersion": "default",
+  "refmap": true
+}

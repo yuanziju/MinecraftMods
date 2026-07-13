@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "rhenium",
+  "version": "${version}",
+  "name": "Rhenium",
+  "description": "红石综合优化模组 - 不破坏微时序与0t电路",
+  "authors": [
+    "Rhenium Team"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.rhenium.optimization.RheniumMod"
+    ],
+    "client": [
+      "com.rhenium.optimization.RheniumClient"
+    ],
+    "modmenu": [
+      "com.rhenium.optimization.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "rhenium.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.11.0+kotlin.2.0.0"
+  },
+  "recommends": {
+    "modmenu": "*",
+    "cloth-config": "*"
+  }
+}
