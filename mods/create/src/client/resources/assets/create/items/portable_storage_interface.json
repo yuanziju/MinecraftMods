@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "create:model/normal",
+    "model": "create:block/portable_storage_interface/item"
+  }
+}

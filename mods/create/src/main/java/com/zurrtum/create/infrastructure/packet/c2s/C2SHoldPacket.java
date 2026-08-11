@@ -1,0 +1,35 @@
+package com.zurrtum.create.infrastructure.packet.c2s;
+
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.protocol.PacketType;
+import net.minecraft.network.protocol.game.ServerGamePacketListener;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.network.ServerGamePacketListenerImpl;
+
+import java.util.function.Consumer;
+
+import static com.zurrtum.create.Create.MOD_ID;
+
+public record C2SHoldPacket(PacketType<Packet<ServerGamePacketListener>> id,
+                            Consumer<ServerGamePacketListenerImpl> consumer) implements Packet<ServerGamePacketListener> {
+    public C2SHoldPacket(String id, Consumer<ServerGamePacketListenerImpl> callback) {
+        this(new PacketType<>(PacketFlow.SERVERBOUND, Identifier.fromNamespaceAndPath(MOD_ID, id)), callback);
+    }
+
+    public StreamCodec<RegistryFriendlyByteBuf, Packet<ServerGamePacketListener>> codec() {
+        return StreamCodec.unit(this);
+    }
+
+    @Override
+    public void handle(ServerGamePacketListener listener) {
+        consumer.accept((ServerGamePacketListenerImpl) listener);
+    }
+
+    @Override
+    public PacketType<Packet<ServerGamePacketListener>> type() {
+        return id;
+    }
+}

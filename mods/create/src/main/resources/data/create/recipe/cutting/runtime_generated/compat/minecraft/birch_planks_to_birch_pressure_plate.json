@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:birch_pressure_plate"
+    }
+  ],
+  "ingredient": "minecraft:birch_planks",
+  "type": "create:cutting"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "create:item_application",
+  "target": "#c:stripped_woods",
+  "ingredient": "#c:ingots/copper",
+  "results": [
+    {
+      "id": "create:copper_casing"
+    }
+  ]
+}
