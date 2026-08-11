@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:acacia_fence"
+    }
+  ],
+  "ingredient": "minecraft:acacia_planks",
+  "type": "create:cutting"
+}

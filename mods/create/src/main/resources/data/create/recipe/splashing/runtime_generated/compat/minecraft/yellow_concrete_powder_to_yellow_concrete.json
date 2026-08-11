@@ -1,0 +1,9 @@
+{
+  "results": [
+    {
+      "id": "minecraft:yellow_concrete"
+    }
+  ],
+  "ingredient": "minecraft:yellow_concrete_powder",
+  "type": "create:splashing"
+}

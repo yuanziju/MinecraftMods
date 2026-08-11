@@ -1,0 +1,136 @@
+<div align="center">
+
+# Create Fly
+[![Supporters](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dzurrtum%26type%3Dpatrons&style=flat&label=Supporters&color=FF5733)](https://www.patreon.com/cw/ZurrTum)
+[![Discord](https://img.shields.io/discord/1484919833601773629?color=5865F2&label=Discord&style=flat)](https://discord.com/invite/cV2nGWy9eA)
+[![CurseForge](https://img.shields.io/curseforge/dt/1346281?logo=curseforge&label=&suffix=%20&style=flat&color=242629&labelColor=F16436&logoColor=1C1C1C)](https://www.curseforge.com/minecraft/mc-mods/create-fly)
+[![Modrinth](https://img.shields.io/modrinth/dt/create-fly?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5CA424&logoColor=1C1C1C)](https://modrinth.com/mod/create-fly)
+
+</div>
+
+### Higher version Create mod porting to Fabric
+### Download the latest version of Create-Fly:
+
+https://www.curseforge.com/minecraft/mc-mods/create-fly/files/all?page=1&pageSize=20
+
+### 1. What the project specifically does or adds
+
+- This is a Fabric fork of [Create](https://github.com/Creators-of-Create/Create).
+  The official [Create Fabric](https://github.com/Fabricators-of-Create/Create) fork has not released a version 1.21.1
+  or higher. it has been a year since then.
+- Minecraft uses a new rendering method in higher versions: item models use a dedicated rendering folder, rendering uses
+  a rendering pipeline, Entity, BlockEntity and GUI rendering is changed to extract the state first and then render,
+  which requires
+  creating special rendering for GUI elements.
+- Minecraft uses a new data loading method that can capture error messages, which requires a lot of changes to be
+  compatible.
+- The original Fabric fork was ported using Porting-Lib, which actually required implementing many NeoForge features.
+  This project uses a mixin specifically for Create features to make porting easier.
+- The original Fabric fork used a mixed approach to server-side and client-side development, which made it easy for the
+  server to call non-existent client code, leading to errors. This project uses a new code separation mode for
+  development.
+- The original Fabric fork used a builder to generate data, which relied on Registrate-Refabricated and made migration
+  difficult. This project registers data in a way that's more consistent with vanilla Minecraft.
+- This project implements the full Create feature independently, without the need to install the Fabric API.
+
+### 2. Why someone should want to download the project
+
+- Minecraft will always release new versions, and old versions will always become obsolete. If they cannot be ported in
+  time, the accumulated modifications will be huge.
+- This project can provide higher version Create content that does not exist in the original Fabric fork.
+
+### 3. Any other critical information the user must know before downloading
+
+- Please do not report issues with this mod to simibubi and NeoForge Create.
+- Please do not use old game saves. Because data loading changes, data may be lost.
+- Recommended to use REI or JEI or EIV to view recipes, and please report any game crashes.
+- Using shaders will disable Flywheel optimizations.
+
+### 4. TODO List
+
+- Create Commands
+- Compat Fabric Events
+- Compat Other Mod
+
+## This project modifies and includes code from the following projects:
+
+- Engine-Room/Flywheel
+- Engine-Room/Flywheel/Vanillin
+- Creators-of-Create/Create
+- Creators-of-Create/Ponder
+
+### Contains partial code
+
+- fabricMC/fabric ItemGroup
+- neoforged/NeoForge ObjModel
+
+### The license agreement for the open source code used in this project is stored in the licenses directory.
+
+## Modrinth Maven
+
+```gradle
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
+dependencies {
+    // 26.2-rc-2
+    implementation "maven.modrinth:create-fly:26.2-rc-2-6.0.9-1"
+    // 26.1.2
+    implementation "maven.modrinth:create-fly:26.1.2-6.0.9-4"
+    // 1.21.11
+    modImplementation "maven.modrinth:create-fly:1.21.11-6.0.9-5"
+    // 1.21.10
+    modImplementation "maven.modrinth:create-fly:1.21.10-6.0.9-2"
+    // 1.21.8
+    modImplementation "maven.modrinth:create-fly:1.21.8-6.0.9-2"
+}
+```
+
+## Curse Maven
+
+```gradle
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                url "https://cursemaven.com"
+            }
+        }
+        filter {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
+dependencies {
+    // 26.2-rc-2
+    implementation "curse.maven:create-fly-1346281:8245554-sources-8245556"
+    // 26.1.2
+    implementation "curse.maven:create-fly-1346281:8250336-sources-8250341"
+    // 1.21.11
+    modImplementation "curse.maven:create-fly-1346281:7658527-sources-7658535"
+    // 1.21.10
+    modImplementation "curse.maven:create-fly-1346281:7589702-sources-7589709"
+    // 1.21.8
+    modImplementation "curse.maven:create-fly-1346281:7604718-sources-7604724"
+}
+```
+
+### Donate
+
+- Supporting the Project
+
+[![patreon](https://oss.zurrtum.com/images/patreon.png)](https://www.patreon.com/cw/ZurrTum)
+
+[![afdian](https://oss.zurrtum.com/images/afdian.png)](https://afdian.com/a/zurrtum)

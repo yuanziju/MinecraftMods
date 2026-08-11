@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:stripped_jungle_log"
+    }
+  ],
+  "ingredient": "minecraft:jungle_log",
+  "type": "create:cutting"
+}

@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:stripped_dark_oak_wood"
+    }
+  ],
+  "ingredient": "minecraft:dark_oak_wood",
+  "type": "create:cutting"
+}

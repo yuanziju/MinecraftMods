@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:mangrove_button"
+    }
+  ],
+  "ingredient": "minecraft:mangrove_planks",
+  "type": "create:cutting"
+}

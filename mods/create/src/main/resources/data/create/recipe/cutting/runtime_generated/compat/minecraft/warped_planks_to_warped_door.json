@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:warped_door"
+    }
+  ],
+  "ingredient": "minecraft:warped_planks",
+  "type": "create:cutting"
+}

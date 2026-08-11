@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "create:model/normal",
+    "model": "create:block/light_blue_valve_handle"
+  }
+}

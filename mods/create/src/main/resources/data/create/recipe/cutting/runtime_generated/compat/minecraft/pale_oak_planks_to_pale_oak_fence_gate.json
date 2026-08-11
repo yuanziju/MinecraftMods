@@ -1,0 +1,10 @@
+{
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "minecraft:pale_oak_fence_gate"
+    }
+  ],
+  "ingredient": "minecraft:pale_oak_planks",
+  "type": "create:cutting"
+}
